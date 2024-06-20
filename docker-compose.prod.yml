@@ -11,9 +11,11 @@ services:
       context: .
       args:
         NODE_ENV: production
-
     environment:
       - NODE_ENV=production
+      - PORT=3000
+      - MONGO_URI=mongodb://root:example@mongo:27017
+      - JWT_SECRET=dfjnfudniuerifnfgnfugngfiungiufng
     command: node index.js
   mongo:
     image: mongo
