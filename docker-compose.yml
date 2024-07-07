@@ -21,7 +21,7 @@ services:
     networks:
       - coupon-network
     depends_on:
-      - redis
+      - mongo
 
 volumes:
   mongo-db:
