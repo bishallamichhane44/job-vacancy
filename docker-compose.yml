@@ -1,0 +1,24 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+    volumes:
+      - mongo-db:/data/
+  serverApi:
+    image: bishal4433/job-vacancy:latest
+    container_name: coupon-backend-server
+    command: npm run start
+    env_file:
+      - ./.env
+    ports:
+      - "7023:7023"
+    networks:
+      - coupon-network
+    depends_on:
+      - redis
+
+volumes:
+  mongo-db:

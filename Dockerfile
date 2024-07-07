@@ -13,3 +13,4 @@ ENV PORT 3000
 EXPOSE $PORT
 CMD ["node", "index.js"]
 
+# docker push roshankarkikc00/test:tagname
