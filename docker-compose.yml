@@ -12,7 +12,10 @@ services:
     container_name: coupon-backend-server
     command: npm run start
     env_file:
-      - ./.env
+      - NODE_ENV=production
+      - PORT=3000
+      - MONGO_URI=mongodb://root:example@mongo:27017
+      - JWT_SECRET=dfjnfudniuerifnfgnfugngfiungiufng
     ports:
       - "7023:7023"
     networks:
