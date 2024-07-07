@@ -13,7 +13,7 @@ services:
     command: npm run start
     env_file:
       - NODE_ENV=production
-      - PORT=3000
+      - PORT=7023
       - MONGO_URI=mongodb://root:example@mongo:27017
       - JWT_SECRET=dfjnfudniuerifnfgnfugngfiungiufng
     ports:
